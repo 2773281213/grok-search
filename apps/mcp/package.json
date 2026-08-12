@@ -1,0 +1,29 @@
+{
+  "name": "@cairn/mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "cairn-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsup",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@cairn/providers": "workspace:*",
+    "@cairn/search-core": "workspace:*",
+    "@cairn/shared": "workspace:*",
+    "@cairn/storage": "workspace:*",
+    "@modelcontextprotocol/sdk": "^1.13.0",
+    "better-sqlite3": "^12.2.0",
+    "drizzle-orm": "^0.44.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.7.3"
+  }
+}

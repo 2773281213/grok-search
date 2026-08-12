@@ -1,0 +1,29 @@
+{
+  "name": "@cairn/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "cairn": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsup",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@cairn/providers": "workspace:*",
+    "@cairn/search-core": "workspace:*",
+    "@cairn/shared": "workspace:*",
+    "@cairn/storage": "workspace:*",
+    "better-sqlite3": "^12.2.0",
+    "commander": "^14.0.0",
+    "drizzle-orm": "^0.44.2",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.7.3"
+  }
+}

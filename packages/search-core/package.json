@@ -1,0 +1,21 @@
+{
+  "name": "@cairn/search-core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@cairn/providers": "workspace:*",
+    "@cairn/shared": "workspace:*",
+    "@cairn/storage": "workspace:*",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "cairn",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Cairn — evidence-first AI search engine. 垒石为证的多模型 AI 搜索引擎。",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@11.17.0",
+  "scripts": {
+    "dev": "pnpm --filter @cairn/web dev",
+    "build": "pnpm -r run build",
+    "lint": "eslint .",
+    "typecheck": "pnpm -r run typecheck",
+    "test": "vitest run",
+    "test:e2e": "pnpm --filter @cairn/web test:e2e",
+    "db:generate": "pnpm --filter @cairn/storage db:generate"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "eslint": "^9.30.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.35.0",
+    "vitest": "^3.2.0"
+  }
+}

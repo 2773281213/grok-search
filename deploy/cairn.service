@@ -1,0 +1,27 @@
+[Unit]
+Description=Cairn evidence-first AI search
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/opt/cairn/current
+Environment=NODE_ENV=production
+Environment=HOSTNAME=127.0.0.1
+Environment=PORT=8790
+EnvironmentFile=/opt/cairn/shared/.env
+ExecStart=/usr/bin/node /opt/cairn/current/apps/web/server.js
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=30
+KillSignal=SIGTERM
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ReadWritePaths=/opt/cairn/shared/data
+
+[Install]
+WantedBy=multi-user.target

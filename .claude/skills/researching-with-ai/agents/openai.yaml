@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cairn Evidence Research"
+  short_description: "Search, compare, and verify claims with cited evidence"
+  default_prompt: "Use $researching-with-ai to investigate this question with verifiable sources."
